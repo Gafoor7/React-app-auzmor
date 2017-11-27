@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root" class="container">
+    </div>
+    <script type="text/babel" src="app.js"></script>
+    <script type="text/babel">
+    
+
+
+    class Header  extends React.Component{
+      render(){
+        return <div class="header">
+            <img src="img/back.png" class="left-nav"/>
+            <img src="img/settings.png" class="avatar"/>
+        </div>
+      }
+    }
+    /*metrics
+    class Metrics  extends React.Component{
+      render(){
+      console.log(this.props)
+        return <div class="metric">
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.temprature} <sup class="units">o</sup></div> 
+                <div class="desc">Temperature</div>
+              </div>
+              <div>
+                <img src="img/temprature.png"/>
+              </div>
+            </div>
+            <div class="data">
+              <div class="number" >
+                <div class="value">{this.props.data.calories} <small class="units">cal</small></div> 
+                <div class="desc">Calories Burned</div>
+              </div>
+              <img src="img/calories.png"/>
+            </div>
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.steps} </div> 
+                <div class="desc">Steps</div>
+              </div>
+              <img src="img/steps.png"/>
+            </div>
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.heartRate} <small class="units">bpm</small></div> 
+                <div class="desc">Heart rate</div>
+              </div>
+              <img src="img/heartrate.png"/>
+            </div>
+          </div>
+      }
+    }*/
+    class Graph  extends React.Component{
+      render(){
+        return <div class="bodyWeightGraph-container">
+            <div class="metric met-block">
+            <div class="data">
+                <div class="number">
+                  <div class="value">{this.props.data.max} <small class="units">kg</small></div> 
+                  <div class="desc">Max Weight</div>
+                </div>
+               
+              </div>
+              <div class="data">
+                <div class="number" >
+                  <div class="value">{this.props.data.min}<small class="units">kg</small></div> 
+                  <div class="desc">Min Weight</div>
+                </div>
+              </div>
+            </div>
+            </div>
+      }
+    }
+    
+    class Greeting  extends React.Component{
+      render(){
+        return <div class="bodyWeightTitle">
+                <h4>{this.props.name.date}</h4>
+              <h1> {this.props.name.bodyWeight} <span class="status">kg.</span></h1>
+              <h2>{this.props.name.name}</h2>
+            </div>
+      }
+    }
+
+    class App  extends React.Component{
+      render(){
+        return <div>
+          <Header avatar = {this.props.data.user.settings}></Header>
+          <Greeting name= {this.props.data.weight} ></Greeting>
+          <Graph data ={this.props.data.metrics}></Graph>
+        </div>
+      }
+    }
+
+    var data = {
+        weight:{
+            bodyWeight: "54.7",
+            date:"June 4 2015",
+            name:"Body Weight"
+        },
+      user:{
+        name : 'Jana',
+        settings : 'img/back.png',
+        status : 'allright'
+      },
+      metrics :{
+        min : 40.7,
+        max : 53.7 
+      }
+    }    
+
+    ReactDOM.render(
+        <App data = {data} ></App>,
+        document.getElementById('root')
+      );
+  </script>
+
+</body>
+
+</html>

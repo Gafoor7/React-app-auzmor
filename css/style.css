@@ -1,0 +1,229 @@
+body{
+		background-color: #909aa9;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.container{
+	    width: 400px;
+	    height: 725px;
+	    margin: 0 auto;
+	    background-color: #FEFFFF;
+	}
+	.header{
+		height: 100px;
+		padding: 30px 30px;
+		box-sizing: border-box;
+	}
+	.banner{
+		height: 220px;
+		box-sizing: border-box;
+	}
+	.title{
+		height: 100px;
+		border-bottom : 1px solid #eaeced;
+		padding: 0px 0px 30px 30px;
+	}
+	
+	.title h2{
+		color:#5e6a7d
+
+	}
+
+	.title .status{
+		color : #0ca8d1;
+	}
+ .bodyWeightTitle{
+	height: 150px;
+	border-bottom : 1px solid #eaeced;
+	padding: 0px 0px 30px 30px;
+}
+
+.bodyWeightTitle h2{
+	color:#5e6a7d
+
+}
+
+.level{
+	color:#fff;
+	font-size: 12px;
+}
+	.metric{
+		height: 270px;
+	
+	}
+	.active{
+		color:#5792f2
+	}
+	.met-block{
+		bottom: 0;
+		left: 0;
+		position: absolute;
+	}
+
+	.metric .data:nth-child(odd) {
+    	border-right: 1px solid #eaeced;
+	}
+	.metric .data {
+	    width: 199px;
+	    height: 135px;
+	    float: left;
+	    border-bottom: 1px solid #eaeced;
+	    padding: 0px 25px;
+    	box-sizing: border-box;
+	}
+	.metric .data  img{
+		width: 110px;
+		height: 50px;
+	}
+
+	.metric .data  .number {
+	    height: 75px;
+	    padding-top: 10px;
+	    box-sizing: border-box;
+	}
+
+	.metric .data  .number .value{
+		font-size: 30px;
+		color:#404c5e;	
+	}
+	.metric .data  .number .value .units{
+		color: #9ba2ae;
+	}
+
+	.metric .data  .number .desc{
+		font-size: 14px;	
+		color: #9ba2ae;
+	}
+
+
+
+	.metricProfile{
+		height: 270px;
+	}
+
+	.metricProfile .data:nth-child(odd) {
+		border-right: 1px solid #446088;
+		border-bottom: 1px solid #446088;
+	}
+	.metricProfile .data:nth-child(even) {
+		border-right: 1px solid #446088;
+		border-bottom: 1px solid #446088;
+	}
+	.metricProfile .data {
+		background-color: #3B547C;
+	    width: 133px;
+	    height: 135px;
+	    float: left;
+	    border-bottom: 1px solid #eaeced;
+	    padding: 0px 25px;
+    	box-sizing: border-box;
+	}
+	.metricProfile .data  img{
+		width: 110px;
+		height: 50px;
+	}
+
+	.metricProfile .data  .number {
+	    height: 75px;
+	    padding-top: 10px;
+	    box-sizing: border-box;
+	}
+
+	.metricProfile .data  .number .value{
+		font-size: 30px;
+		color:#fff;	
+	}
+	.metricProfile .data  .number .value .units{
+		color: #fff;
+		font-size: 14px;
+	}
+
+	.metricProfile .data  .number .desc{
+		font-size: 14px;	
+		color: #fff;
+	}
+	.bodyWeightGraph-container{
+		height: 593px;
+		background-image: url(../img/bodymax.png);
+		background-size: 101% 80%;
+		background-repeat: no-repeat;
+		background-position-x: -2px;
+		vertical-align: bottom;
+		position: relative;
+	}
+	.bodyWeightGraph-minMax{
+		height:175px;
+		background-color: #C7EAFD;
+	}
+	.bodyLevel{
+		height: 300px;
+		padding:20px;
+		background-color: #3B547C;
+	    background-size: 101% 80%;
+	    background-repeat: no-repeat;
+    	background-position-x: -2px;
+	}
+
+	.bodyLevel-title{
+		height: 50px;
+		padding:0px 0px 0px 0px;
+		color: #59677a
+	}
+	.bodyLevel-title li{
+	    float: left;
+	    padding: 5px 40px 0px 0px;
+	    color: #a3a9b2
+	}
+	.graph-container{
+		height: 300px;
+		background-image: url(../img/activity-graph.png);
+	    background-size: 101% 80%;
+	    background-repeat: no-repeat;
+    	background-position-x: -2px;
+	}
+
+	.graph-title{
+		height: 75px;
+		padding:0px 0px 0px 20px;
+		color: #59677a
+	}
+	.graph-title li{
+	    float: left;
+	    padding: 5px 40px 0px 0px;
+	    color: #a3a9b2
+
+	}
+
+	.graph{
+		height: 225px;
+	}
+	.pull-right{
+		float: right;
+	}
+	.pull-left{
+		float: left;
+	}
+
+	.left-nav{
+		height: 30px;
+    	width: 30px;	
+	}
+	
+	.avatar{
+		height: 50px;
+    	width: 50px;
+    	float: right;
+	}
+.bannerImg{
+	height: 220px;
+	width: 400px;
+	box-sizing: border-box;
+}
+.goals{
+	height: 22px;
+	width: 350px;
+	padding: 5px;
+}
+.goalUnits{
+	padding-top:5px;
+	padding-right:10px;
+}

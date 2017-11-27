@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root" class="container">
+
+
+
+    </div>
+    <script type="text/babel" src="app.js"></script>
+    <script type="text/babel">
+    
+
+
+    class Header  extends React.Component{
+      render(){
+        return <div class="banner">
+            <img src={this.props.avatar} class="bannerImg" />
+        </div>
+      }
+    }
+    class Metrics  extends React.Component{
+      render(){
+        return <div class="metricProfile">
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.age} </div> 
+                <div class="desc">Age</div>
+              </div>
+            </div>
+            <div class="data">
+              <div class="number" >
+                <div class="value">{this.props.data.blood} </div> 
+                <div class="desc">Blood</div>
+              </div>
+            </div>
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.bmi} </div> 
+                <div class="desc">BMI</div>
+              </div>
+              
+            </div>
+            <div class="data">
+              <div class="number">
+                <div class="value">{this.props.data.height} <small class="units">cm</small></div> 
+                <div class="desc">Height</div>
+              </div>
+            </div>
+            <div class="data">
+                    <div class="number">
+                      <div class="value">{this.props.data.weight} <small class="units">kg</small></div> 
+                      <div class="desc">Weight</div>
+                    </div>
+                  </div>
+                  <div class="data">
+                        <div class="number">
+                          <div class="value">{this.props.data.fat} <small class="units">%</small></div> 
+                          <div class="desc">Fat</div>
+                        </div>
+                      </div>
+                      
+          </div>
+      }
+    }
+    class Graph  extends React.Component{
+      render(){
+        return <div class="bodyLevel">
+            <div class="bodyLevel-title">
+                <div class="pull-left">
+                        <h3 class="level">Lose Weight</h3>
+                </div>
+                <div class="pull-right goalUnits">
+                                <p>{this.props.meterLevel.lose}</p>
+                </div>
+
+            </div>
+                  
+            <div>
+            <img src="img/loseWeight.png" class="goals"/>
+             </div>  
+             <div class="bodyLevel-title">
+                    <div class="pull-left">
+                            <h3 class="level">Running per week</h3>
+                    </div>
+                    <div class="pull-right goalUnits">
+                                    <p>{this.props.meterLevel.running}</p>
+                    </div>
+    
+                </div>
+                      
+                <div>
+                <img src="img/loseWeight.png" class="goals"/>
+                 </div>  
+                 <div class="bodyLevel-title">
+                        <div class="pull-left">
+                                <h3 class="level">Steps per day</h3>
+                        </div>
+                        <div class="pull-right goalUnits">
+                                        <p>{this.props.meterLevel.steps}</p>
+                        </div>
+        
+                    </div>
+                          
+                    <div>
+                    <img src="img/loseWeight.png" class="goals"/>
+                     </div>  
+              
+            </div>
+      }
+    }
+    /*
+    class Greeting  extends React.Component{
+      render(){
+        return <div class="title">
+              <h2>Welcome back {this.props.name}</h2>
+              <h2>Things look <span class="status">allright.</span></h2>
+            </div>
+      }
+    }*/
+
+    class App  extends React.Component{
+      render(){
+        return <div>
+          <Header avatar = {this.props.data.user.avatar}></Header>
+          
+          <Metrics data = {this.props.data.metricProfile}></Metrics>
+          <Graph meterLevel = {this.props.data.meter}></Graph>
+        </div>
+      }
+    }
+
+    var data = {
+      user:{
+        name : 'Jana',
+        avatar : 'img/banner.png',
+        status : 'allright'
+      },
+      metricProfile :{
+        age : 22,
+        blood : "A",
+        bmi : 20.4,
+        height : 172,
+        weight:53,
+        fat:21
+      },
+      meter:{
+          running: "8.2 km / 10 km",
+          steps: "3342/10000",
+          lose: "4.6 kg / 8 kg"
+      }
+    }    
+
+    ReactDOM.render(
+        <App data = {data} ></App>,
+        document.getElementById('root')
+      );
+  </script>
+
+</body>
+
+</html>
